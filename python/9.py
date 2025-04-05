@@ -15,7 +15,7 @@ def part1(data):
     114
     """
 
-    return sum(extrapolate(seq) for seq in [[int(n) for n in re.findall('-?\d+', line)] for line in data])
+    return sum(extrapolate(seq) for seq in [[int(n) for n in re.findall(r'-?\d+', line)] for line in data])
 
 
 def part2(data):
@@ -25,7 +25,7 @@ def part2(data):
     2
     """
 
-    return sum(extrapolate(seq[::-1]) for seq in [[int(n) for n in re.findall('-?\d+', line)] for line in data])
+    return sum(extrapolate(seq[::-1]) for seq in [[int(n) for n in re.findall(r'-?\d+', line)] for line in data])
 
 
 def extrapolate(seq):

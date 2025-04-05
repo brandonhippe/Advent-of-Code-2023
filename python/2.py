@@ -20,7 +20,7 @@ def part1(data):
     gameData = []
     for line in data:
         gameData.append(defaultdict(lambda: 0))
-        id = int(re.findall('\d+', line)[0])
+        id = int(re.findall(r'\d+', line)[0])
 
         data = line.split(": ")[1]
         validId = True

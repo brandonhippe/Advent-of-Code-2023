@@ -16,7 +16,7 @@ def part1(data):
     5
     """
 
-    bricks = sorted([[[int(n) for n in re.findall('\d+', l)] for l in line.split('~')] for line in data], key=lambda b: b[0][-1])
+    bricks = sorted([[[int(n) for n in re.findall(r'\d+', l)] for l in line.split('~')] for line in data], key=lambda b: b[0][-1])
     bricks = fall(bricks)
 
     support = defaultdict(lambda: [])
@@ -50,7 +50,7 @@ def part2(data):
     7
     """
 
-    bricks = sorted([[[int(n) for n in re.findall('\d+', l)] for l in line.split('~')] for line in data], key=lambda b: b[0][-1])
+    bricks = sorted([[[int(n) for n in re.findall(r'\d+', l)] for l in line.split('~')] for line in data], key=lambda b: b[0][-1])
     bricks = fall(bricks)
 
     support = defaultdict(lambda: [])

@@ -35,7 +35,7 @@ def part1(data):
 
     count = 0
     for line in data[ix + 1:]:
-        x, m, a, s = [int(n) for n in re.findall('\d+', line)]
+        x, m, a, s = [int(n) for n in re.findall(r'\d+', line)]
 
         if evalWorkflow('in', x, m, a, s):
             count += x+m+a+s

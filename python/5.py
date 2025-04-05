@@ -22,7 +22,7 @@ def part1(data):
         if len(line) == 0:
             continue
 
-        numStrings = re.findall('\d+', line)
+        numStrings = re.findall(r'\d+', line)
         if len(numStrings) == 0:
             currConv = line.split(' ')[0]
             currConv = tuple(currConv.split('-to-'))
@@ -30,7 +30,7 @@ def part1(data):
         else:
             maps[currConv].append([int(n) for n in numStrings])
 
-    seeds = [int(n) for n in re.findall('\d+', data[0])]
+    seeds = [int(n) for n in re.findall(r'\d+', data[0])]
     nums = seeds[:]
     currType = 'seed'
 
@@ -68,7 +68,7 @@ def part2(data):
         if len(line) == 0:
             continue
 
-        numStrings = re.findall('\d+', line)
+        numStrings = re.findall(r'\d+', line)
         if len(numStrings) == 0:
             currConv = line.split(' ')[0]
             currConv = tuple(currConv.split('-to-'))
@@ -76,7 +76,7 @@ def part2(data):
         else:
             maps[currConv].append([int(n) for n in numStrings])
 
-    seeds = [int(n) for n in re.findall('\d+', data[0])]
+    seeds = [int(n) for n in re.findall(r'\d+', data[0])]
 
     s = float('inf')
 

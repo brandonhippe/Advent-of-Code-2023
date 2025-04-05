@@ -17,8 +17,8 @@ def part1(data):
     288
     """
 
-    times = [int(n) for n in re.findall('\d+', data[0])]
-    distances = [int(n) for n in re.findall('\d+', data[1])]
+    times = [int(n) for n in re.findall(r'\d+', data[0])]
+    distances = [int(n) for n in re.findall(r'\d+', data[1])]
 
     product = 1
     for t, d in zip(times, distances):

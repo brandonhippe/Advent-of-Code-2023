@@ -29,13 +29,13 @@ def part2(data):
     boxes = defaultdict(lambda: OrderedDict())
 
     for line in data[0].split(','):
-        label = re.findall('\w+', line)[0]
+        label = re.findall(r'\w+', line)[0]
         box = hashAlg(label)
         
         op = re.findall('[-=]', line)[0]
 
         if op == '=':
-            lens = int(re.findall('\d+', line)[0])
+            lens = int(re.findall(r'\d+', line)[0])
             boxes[box][label] = lens
         elif label in boxes[box]:
             boxes[box].pop(label)

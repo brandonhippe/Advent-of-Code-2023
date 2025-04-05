@@ -21,8 +21,8 @@ def part1(data):
         line = line.split(': ')[1]
         winning, have = line.split(' | ')
 
-        winning = set(int(n) for n in re.findall('\d+', winning))
-        have = set(int(n) for n in re.findall('\d+', have))
+        winning = set(int(n) for n in re.findall(r'\d+', winning))
+        have = set(int(n) for n in re.findall(r'\d+', have))
 
         match = winning.intersection(have)
         
@@ -44,9 +44,9 @@ def part2(data):
         card, info = line.split(': ')
         winning, have = info.split(' | ')
 
-        card = int(re.findall('\d+', card)[0])
-        winning = set(int(n) for n in re.findall('\d+', winning))
-        have = set(int(n) for n in re.findall('\d+', have))
+        card = int(re.findall(r'\d+', card)[0])
+        winning = set(int(n) for n in re.findall(r'\d+', winning))
+        have = set(int(n) for n in re.findall(r'\d+', have))
 
         match = winning.intersection(have)
         cards[card] = list(range(card + 1, card + len(match) + 1))

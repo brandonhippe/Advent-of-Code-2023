@@ -23,7 +23,7 @@ def part1(data):
 
     nodes = {}
     for line in data[2:]:
-        lineData = re.findall('\w+', line)
+        lineData = re.findall(r'\w+', line)
         nodes[lineData[0]] = lineData[1:]
 
     s = 0
@@ -47,7 +47,7 @@ def part2(data):
 
     nodes = {}
     for line in data[2:]:
-        lineData = re.findall('\w+', line)
+        lineData = re.findall(r'\w+', line)
         nodes[lineData[0]] = lineData[1:]
 
     startNodes = {n for n in nodes.keys() if n[-1] == 'A'}

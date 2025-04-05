@@ -20,8 +20,8 @@ def part1(data, minBound = 200000000000000, maxBound = 400000000000000):
     vs = []
     for line in data:
         p, v = line.split(' @ ')
-        ps.append(tuple(int(n) for n in re.findall('-?\d+', p)))
-        vs.append(tuple(int(n) for n in re.findall('-?\d+', v)))
+        ps.append(tuple(int(n) for n in re.findall(r'-?\d+', p)))
+        vs.append(tuple(int(n) for n in re.findall(r'-?\d+', v)))
 
     return intersections([tuple(p[:-1]) for p in ps], [tuple(v[:-1]) for v in vs], minBound, maxBound)
 
@@ -37,8 +37,8 @@ def part2(data):
     vs = []
     for line in data:
         p, v = line.split(' @ ')
-        ps.append(tuple(int(n) for n in re.findall('-?\d+', p)))
-        vs.append(tuple(int(n) for n in re.findall('-?\d+', v)))
+        ps.append(tuple(int(n) for n in re.findall(r'-?\d+', p)))
+        vs.append(tuple(int(n) for n in re.findall(r'-?\d+', v)))
 
     posVels = {axis: set(range(-1000, 1001)) for axis in [0, 1, 2]}
     for i in range(len(vs) - 1):

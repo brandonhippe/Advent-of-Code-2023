@@ -15,14 +15,14 @@ def part1(data):
     142
     """
 
-    return sum(int(''.join(d)) for d in [[re.findall('\d', line)[0], re.findall('\d', line)[-1]] for line in data])
+    return sum(int(''.join(d)) for d in [[re.findall(r'\d', line)[0], re.findall(r'\d', line)[-1]] for line in data])
 
 
 def part2(data):
     """ 2023 Day 1 Part 2
     """
 
-    nums = [[re.findall('\d', line)[0], re.findall('\d', line)[-1]] for line in data]
+    nums = [[re.findall(r'\d', line)[0], re.findall(r'\d', line)[-1]] for line in data]
 
     for n, line in enumerate(data):
         d = nums[n]

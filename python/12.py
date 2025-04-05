@@ -20,7 +20,7 @@ def part1(data):
     for line in data:
         groups, numbers = line.split(' ')
         groups = tuple(re.findall('[#?]+', groups))
-        numbers = tuple(int(n) for n in re.findall('\d+', numbers))
+        numbers = tuple(int(n) for n in re.findall(r'\d+', numbers))
         s += calcCombs(groups, numbers)
 
     return s
@@ -39,7 +39,7 @@ def part2(data):
         groups = '?'.join([groups] * 5)
         numbers = (numbers + ',') * 5
         groups = tuple(re.findall('[#?]+', groups))
-        numbers = tuple(int(n) for n in re.findall('\d+', numbers))
+        numbers = tuple(int(n) for n in re.findall(r'\d+', numbers))
         
         s += calcCombs(groups, numbers)
 

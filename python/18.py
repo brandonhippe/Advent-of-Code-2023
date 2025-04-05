@@ -49,7 +49,7 @@ def part2(data):
         direction, dist, color = line.split(' ')
 
         prev = pos
-        dist = re.findall('\w+', color)[0]
+        dist = re.findall(r'\w+', color)[0]
         direction = list(OFFSETS.keys())[int(dist[-1])]
         dist = int(dist[:-1], 16)
         pos = tuple(p + (o * dist) for p, o in zip(pos, OFFSETS[direction]))
