@@ -3,7 +3,7 @@
 # brandonhippe's Advent of Code Solutions for 2023
 <!-- #{(year_tiles)} -->
 <h1 align="center">
-  2023 - 50 ⭐ - Python/Rust
+  2023 - 50 ⭐ - Rust/Python
 </h1>
 <a href="python/1.py">
   <img src=".tiles/images/2023/01.png" width="161px">
